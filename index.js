@@ -15,11 +15,11 @@ app.use(express.json());
 
 app.use("/user", userRoutes)
 
-// ! For production level
-app.use(express.static(path.join(__dirname, 'client', 'build')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-});
+//  For production level
+// app.use(express.static(path.join(__dirname, 'client', 'build')));
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+// });
 
 
 const DB = 'mongodb+srv://A158_debug:U1t02eSrON6Ojf7G@kloudstac-0.lacdzaz.mongodb.net/?retryWrites=true&w=majority'

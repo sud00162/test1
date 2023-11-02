@@ -26,7 +26,7 @@ const Footer = () => {
               <div key={index} className="px-5 py-2">
                 <Link
                   to={item.path}
-                  className="text-lg leading-6 text-slate-200 hover:text-fuchsia-500"
+                  className="text-lg leading-6 text-slate-200 hover:text-custom_green "
                 >
                   {item.link}
                 </Link>
@@ -57,7 +57,7 @@ const Footer = () => {
           </p>
           <button
             onClick={scrollToTop}
-            className={`bg-fuchsia-500 text-white p-2 font-bold fixed bottom-4 right-4 ${
+            className={`bg-custom_green text-white p-2 font-bold fixed bottom-4 right-4 ${
               visible ? "inline" : "hidden"
             } float-right`}
           >

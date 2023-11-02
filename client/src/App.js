@@ -3,17 +3,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer';
+import Loader from './components/Loader';
 
 
-import { Home, About, Contact, Register, MultiCloudData, MultiCloudNetworking, MultiCloudSecurity } from './page/index'
+import { Home, About, Register, MultiCloudData, MultiCloudNetworking, MultiCloudSecurity, PythonGenAI, PythonML } from './page/index'
 
-const Loader = () => {
-  <button type="button" class="bg-indigo-500 ..." disabled>
-    <svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
-    </svg>
-    Loading...
-  </button>
-}
+
 
 const App = () => {
   return (
@@ -27,8 +22,11 @@ const App = () => {
             <Route path="/courses/data" element={<MultiCloudData />} />
             <Route path="/courses/networking" element={<MultiCloudNetworking />} />
             <Route path="/courses/security" element={<MultiCloudSecurity />} />
-            <Route path="/registeration" element={<Register />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/courses/pythongenai" element={<PythonGenAI />} />
+            <Route path="/courses/pythonml" element={<PythonML />} />
+
+            {/* <Route path="/registeration" element={} /> */}
+            <Route path="/contact" element={<Register />} />
           </Routes>
         </Suspense>
         <Footer />

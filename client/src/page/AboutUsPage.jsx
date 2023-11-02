@@ -1,22 +1,26 @@
 import React from "react";
+import { AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
+
 import Prabodh from "../img/prabodh1.png";
 import Abhiroop from "../img/abhiroop.png";
-import { AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
+
 import pngegg from "../img/pngegg.png";
 import pngegg1 from "../img/pngegg1.png";
 
 const About = () => {
   return (
     <div className="mt-30 about_us_page">
-      <div className="header_slider about_bg_2 flex items-center text-white overlay h-[500px]  md:h-[650px]">
-        <div className="header_text  flex justify-center">
-          <h3 className="text-lg md:text-3xl md:w-1/2 px-5 md:px-0uppercase">
-            
-          </h3>
+      <div className="AboutUs_Image_Container h-[50vh] md:h-screen">
+        <div className="md:w-2/5 h-100  flex items-center justify-center">
+            <p className="p-3 md:p-10 md:text-3xl AboutUs_Content mx-4 md:mr-10">
+              We help students and young professionals build deep skills in
+              cloud engineering and put them on a path to high paying lucrative
+              tech careers
+            </p>
         </div>
       </div>
 
-      <div className="how_we_about_area relative my-20">
+      <div className="relative my-20">
         <div className="flex">
           <div className="md:basis-1/2">
             <div className="work_info px-3 md:px-20">
@@ -42,12 +46,11 @@ const About = () => {
       <div className="my-[100px]">
         <div className="my-10">
           <p className="text-4xl md:text-5xl font-bold text-green-500 pl-2 md:pl-20">
-            Here's what make us {" "}
-            <span className="text-black"> Exception !</span>
+            Here's what make us <span className="text-black"> Exception !</span>
           </p>
         </div>
 
-        <div className="flex justify-around items-center p-2">
+        <div className="flex justify-around items-center p-2 flex-wrap">
           <div className="max-w-sm rounded overflow-hidden flex flex-col border justify-center items-center mx-5 p-3 border-green-500 border-b-4">
             <img className="h-48 w-48" src={pngegg} alt="" />
             <div className="flex-grow px-6 py-4 mb-5">
@@ -147,7 +150,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };

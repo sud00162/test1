@@ -11,17 +11,8 @@ export const Footer_link = [
     },
     {
         id: 3,
-        link: "Registration",
-        path: "/registeration"
-    },
-    {
-        id: 4,
         link: "Contact",
         path: "/contact"
     },
-    {
-        id: 5,
-        link: "Consulting",
-        path: "/consulting"
-    },
 ]
+

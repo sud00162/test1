@@ -44,34 +44,14 @@ const Navbar = () => {
             {/*------------------ Navbar links ------------------- */}
             <div className="hidden md:flex items-center space-x-1">
               <Link
-                to="/"
-                className={`py-2 px-6 text-xl hover:text-blue-700 ${
-                  selectedOption === "Home" ? "text-blue-700" : ""
-                }`}
-                onClick={() => handleMenuClick("Home")}
-              >
-                Home
-              </Link>
-
-              <Link
                 to="/about"
-                className={`py-2 px-6 text-xl hover:text-blue-700 ${
-                  selectedOption === "About" ? "text-blue-700" : ""
+                className={`py-2 px-6 text-xl hover:text-custom_green ${
+                  selectedOption === "About" ? "text-custom_green" : ""
                 }`}
                 onClick={() => handleMenuClick("About")}
               >
                 About
               </Link>
-              <Link
-                to="/consulting"
-                className={`py-2 px-6 text-xl hover:text-blue-700 ${
-                  selectedOption === "Consulting" ? "text-blue-700" : ""
-                }`}
-                onClick={() => handleMenuClick("Consulting")}
-              >
-                Consulting
-              </Link>
-
               <div
                 className="relative"
                 onMouseEnter={handleMouseEnter}
@@ -103,22 +83,36 @@ const Navbar = () => {
                   {isDropdownOpen && (
                     <div className="absolute right-0 mt-4 w-max  bg-white app_navbar_dropdown z-111 rounded-md">
                       <Link
+                        to="/courses/pythonml"
+                        className="block px-4 py-2 hover:text-custom_green hover:bg-slate-200"
+                        onClick={toggleDropdown}
+                      >
+                        AI and ML with Python
+                      </Link>
+                      <Link
+                        to="/courses/pythongenai"
+                        className="block px-4 py-2 hover:text-custom_green hover:bg-slate-200"
+                        onClick={toggleDropdown}
+                      >
+                        Generative AI with Python and AWS
+                      </Link>
+                      <Link
                         to="/courses/data"
-                        className="block px-4 py-2 hover:text-blue-700 hover:bg-slate-200"
+                        className="block px-4 py-2 hover:text-custom_green hover:bg-slate-200"
                         onClick={toggleDropdown}
                       >
                         Multi-Cloud Data Engineer
                       </Link>
                       <Link
                         to="/courses/networking"
-                        className="block px-4 py-2 hover:text-blue-700 hover:bg-slate-200"
+                        className="block px-4 py-2 hover:text-custom_green hover:bg-slate-200"
                         onClick={toggleDropdown}
                       >
-                        Multi-Cloud Networking Engineer
+                       Multi-Cloud Network Engineer 
                       </Link>
                       <Link
                         to="/courses/security"
-                        className="block px-4 py-2 hover:text-blue-700 hover:bg-slate-200"
+                        className="block px-4 py-2 hover:text-custom_green hover:bg-slate-200"
                         onClick={toggleDropdown}
                       >
                         Multi-Cloud Security Engineer
@@ -127,20 +121,10 @@ const Navbar = () => {
                   )}
                 </div>
               </div>
-
-              <Link
-                to="/registeration"
-                className={`py-2 px-6 text-xl hover:text-blue-700 ${
-                  selectedOption === "Registeration" ? "text-blue-700" : ""
-                }`}
-                onClick={() => handleMenuClick("Registeration")}
-              >
-                Registration
-              </Link>
               <Link
                 to="/contact"
-                className={`py-2 px-6 text-xl hover:text-blue-700 ${
-                  selectedOption === "Contact" ? "text-blue-700" : ""
+                className={`py-2 px-6 text-xl hover:text-custom_green ${
+                  selectedOption === "Contact" ? "text-custom_green" : ""
                 }`}
                 onClick={() => handleMenuClick("Contact")}
               >
@@ -173,28 +157,12 @@ const Navbar = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
-                to="/"
-                className="block py-2 px-4"
-                onClick={toggleMobileMenu}
-              >
-                Home
-              </Link>
-
-              <Link
                 to="/about"
                 className="block w-full text-left py-2 px-4"
                 onClick={toggleMobileMenu}
               >
                 About
               </Link>
-              <Link
-                to="/consulting"
-                className="block w-full text-left py-2 px-4"
-                onClick={toggleMobileMenu}
-              >
-                Consulting
-              </Link>
-
               <div className="">
                 <div className="block py-2 px-4" onClick={toggleDropdown}>
                   <div className="flex items-center">
@@ -219,6 +187,20 @@ const Navbar = () => {
                 {isDropdownOpen && (
                   <div className="mt-2 p-2 md:p-0 md:w-48 bg-white rounded-md shadow-lg z-10">
                     <Link
+                      to="/courses/pythonml"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      onClick={toggleMobileMenu}
+                    >
+                       AI and ML with Python
+                    </Link>
+                    <Link
+                      to="/courses/pythongenai"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      onClick={toggleMobileMenu}
+                    >
+                      Generative AI with Python and AWS
+                    </Link>
+                    <Link
                       to="/courses/data"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                       onClick={toggleMobileMenu}
@@ -242,14 +224,6 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
-
-              <Link
-                to="/registeration"
-                className="block py-2 px-4"
-                onClick={toggleMobileMenu}
-              >
-                Registration
-              </Link>
               <Link
                 to="/contact"
                 className="block py-2 px-4"

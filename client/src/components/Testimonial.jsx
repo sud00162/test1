@@ -1,43 +1,46 @@
 import React from "react";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+
 import Cards from "./Cards";
-import Card1 from "../img/courses/card11.png";
-import Card2 from "../img/courses/card44.png";
-import Card3 from "../img/courses/card22.png";
-import Card4 from "../img/courses/card33.png";
-import Card5 from "../img/courses/card55.jpg.png";
+
+import Cloud_Security_Carousel from '../assets/img/Cloud_Security_Carousel.png'
+import Generative_AI_Carousel from '../assets/img/Generative_AI_Carousel.png'
+import Multi_Cloud_Carousel from '../assets/img/Multi_Cloud_Carousel.png'
+import Networking_Carousel from '../assets/img/Networking_Carousel.png'
+import Python_AI_Carousel from '../assets/img/Python_AI_Carousel.png'
 
 const courses = [
   {
     id: 1,
-    name: "Multi-Cloud DevOps Engineer",
-    img: Card1,
-    link: "/courses/data",
+    name: "AI and ML with Python",
+    img: Python_AI_Carousel,
+    link: "/courses/pythonml",
   },
   {
     id: 2,
     name: "Multi-Cloud Data Engineer ",
-    img: Card3,
+    img: Multi_Cloud_Carousel,
     link: "/courses/data",
   },
   {
     id: 3,
     name: "Multi-Cloud Generative AI & LLMs",
-    img: Card4,
-    link: "/courses/data",
+    img: Generative_AI_Carousel,
+    link: "/courses/pythongenai",
   },
   {
     id: 4,
     name: "Multi-Cloud Security Engineer",
-    img: Card2,
+    img: Cloud_Security_Carousel,
     link: "/courses/security",
   },
   {
     id: 5,
     name: "Multi-Cloud Networking Engineer ",
-    img: Card5,
+    img: Networking_Carousel,
     link: "/courses/networking",
   },
 ];
@@ -55,14 +58,14 @@ const Testimonial = () => {
       {
         breakpoint: 768, // Adjust breakpoints as needed
         settings: {
-          slidesToShow: 2, // Display 2 cards in a row on mobile
+          slidesToShow: 1, // Display 2 cards in a row on mobile
         },
       },
     ],
   };
 
   return (
-    <div className="p-3 md:p-5 md:my-0 relative" id="home_courses">
+    <div className="p-3 md:p-5 my-10 md:my-0" id="home_courses">
       <h2 className="text-xl md:text-4xl font-bold leading-tight text-center mb-5 uppercase">
         Courses <span className="text-green-600">Offered</span>
       </h2>
@@ -72,13 +75,13 @@ const Testimonial = () => {
           programs across DevOps, Data, Security, Networking and Generative AI
           courses with hands-on labs and projects.
         </p>
-        <div className="w-32 h-2 bg-green-500 rounded-full mx-auto"></div>
+        <div className="w-32 h-2 bg-custom_green rounded-full mx-auto"></div>
       </div>
       {/* --------- For Mobile and Desktop view -------- */}
       <Slider {...settings}>
         {courses.map((content) => (
-          <div key={content.id} className="p-2">
-            <div className="aspect-w-3 aspect-h-4" style={{ height: "100%" }}>
+          <div key={content.id}>
+            <div className="p-2" style={{ height: "100%" }}>
               <Cards name={content.name} img={content.img} id={content.id} />
             </div>
           </div>

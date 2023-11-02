@@ -1,4 +1,4 @@
-const UserSchema = require('./models/userModel.js');
+const UserSchema = require('../models/userModel.js');
 
 exports.CourseUser = async (req, res) => {
     const { name, email, course, mobile } = req.body;

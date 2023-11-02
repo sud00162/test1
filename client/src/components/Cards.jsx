@@ -13,7 +13,7 @@ const Cards = ({ img, name, id, link }) => {
         </p>
         <Link
           to={link}
-          className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-green-600 sm:w-fit"
+          className="py-2 md:py-3 px-4 md:px-5 my-2 md:font-medium text-center text-white bg-custom_green sm:w-fit rounded-3xl"
         >
           View Course
         </Link>
